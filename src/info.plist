@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>mikage.alfred.translate</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>2D68D0D9-6D5A-4D48-89C2-6F3D13E0B947</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7D5FAEDC-F4E6-4E3B-95D2-BC9A27A063A1</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Search/поиск</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E9C41A81-A26C-40A3-A3DE-6C0F1C334B8F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D68D0D9-6D5A-4D48-89C2-6F3D13E0B947</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7D5FAEDC-F4E6-4E3B-95D2-BC9A27A063A1</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Search/поиск</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Igor Bakhtin</string>
+	<key>description</key>
+	<string>Alfred workflow for translate en-ru and ru-en</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Translate</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>searcher</key>
+				<integer>1635215215</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.systemwebsearch</string>
+			<key>uid</key>
+			<string>7D5FAEDC-F4E6-4E3B-95D2-BC9A27A063A1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>t</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Перевожу / translating</string>
+				<key>script</key>
+				<string>node ./translate.js "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>en-ru, ru-en</string>
+				<key>title</key>
+				<string>Translate</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2D68D0D9-6D5A-4D48-89C2-6F3D13E0B947</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>17</integer>
+				<key>hotmod</key>
+				<integer>1572864</integer>
+				<key>hotstring</key>
+				<string>T</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>E9C41A81-A26C-40A3-A3DE-6C0F1C334B8F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>е</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Перевожу / translating</string>
+				<key>script</key>
+				<string>node ./translate.js "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>en-ru, ru-en</string>
+				<key>title</key>
+				<string>Translate</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Alfred Workflow Translate RU-EN EN-RU
+
+Convenient translation of texts in en-ru ru-en directions.
+
+Fork https://github.com/podgorniy/alfred-translate
+
+---
+
+The main idea remains the same. But for this workflow to work correctly, it was necessary to rewrite the entire script due to the limitations of the Yandex API, which can now only translate one word.
+The script was rewritten in JS, and the Yandex Translator API was removed in favor of the Google Translate API.
+
+---
+
+## Features
+
+- Translates Russian text into English. English text to Russian. You do not need to indicate the direction of the translation.
+- Works with both input text and selected text.
+- Shows translation options for one word.
+- Spell check for one word.
+- Translates both words and sentences.
+- Copies the translation result to the clipboard.
+
+![](screenshots/screenshot-1.png)
+![](screenshots/screenshot-2.png)
+
+## Installation
+
+#### Requirements
+
+- MacOS 12.4 and above
+- Requires node at least version 14
+- Internet connection
+- Alfred Powerpack
+
+#### Download and import
+
+1. Download the latest version from [the releases page](https://github.com/Mikage777/alfred-translate/releases).
+2. Import the downloaded file to Alfred.
+
+#### Commands
+
+Translation of a word, starting from Alfred string on the keyword: `t` or `e`:
+
+Hotkey to call: `Option ⌥ + Command ⌘ + T`</string>
+	<key>uidata</key>
+	<dict>
+		<key>2D68D0D9-6D5A-4D48-89C2-6F3D13E0B947</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>70</real>
+		</dict>
+		<key>7D5FAEDC-F4E6-4E3B-95D2-BC9A27A063A1</key>
+		<dict>
+			<key>xpos</key>
+			<real>500</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</key>
+		<dict>
+			<key>xpos</key>
+			<real>700</real>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>E9C41A81-A26C-40A3-A3DE-6C0F1C334B8F</key>
+		<dict>
+			<key>xpos</key>
+			<real>105</real>
+			<key>ypos</key>
+			<real>125</real>
+		</dict>
+		<key>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</key>
+		<dict>
+			<key>xpos</key>
+			<real>335</real>
+			<key>ypos</key>
+			<real>235</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/Mikage777/alfred-translate</string>
+</dict>
+</plist>

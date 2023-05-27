@@ -1,0 +1,9 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "printWidth": 100,
+  "organizeImportsSkipDestructiveCodeActions": true
+}
