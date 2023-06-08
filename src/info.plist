@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>mikage.alfred.translate</string>
-	<key>category</key>
-	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>2D68D0D9-6D5A-4D48-89C2-6F3D13E0B947</key>
@@ -16,10 +14,33 @@
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>Search/поиск</string>
+				<string>Go to Google Translate</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D98823FF-6083-4959-AD0C-6841828B0298</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Show full text</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D98823FF-6083-4959-AD0C-6841828B0298</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</string>
@@ -43,39 +64,6 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7D5FAEDC-F4E6-4E3B-95D2-BC9A27A063A1</string>
-				<key>modifiers</key>
-				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string>Search/поиск</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -85,7 +73,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Translate</string>
+	<string>Translate EN-RU RU-EN</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -94,7 +82,7 @@
 				<key>browser</key>
 				<string></string>
 				<key>searcher</key>
-				<integer>1635215215</integer>
+				<integer>1635218546</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.systemwebsearch</string>
@@ -119,7 +107,7 @@
 				<key>escaping</key>
 				<integer>4</integer>
 				<key>keyword</key>
-				<string>t</string>
+				<string>{var:keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -131,9 +119,9 @@
 				<key>runningsubtext</key>
 				<string>Перевожу / translating</string>
 				<key>script</key>
-				<string>node ./translate.js "{query}"</string>
+				<string>node ./translate.js "$1"</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
@@ -164,11 +152,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>17</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1572864</integer>
+				<integer>0</integer>
 				<key>hotstring</key>
-				<string>T</string>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -205,49 +193,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
+				<key>alignment</key>
 				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>keyword</key>
-				<string>е</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string>Перевожу / translating</string>
-				<key>script</key>
-				<string>node ./translate.js "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
+				<key>backgroundcolor</key>
 				<string></string>
-				<key>subtext</key>
-				<string>en-ru, ru-en</string>
-				<key>title</key>
-				<string>Translate</string>
-				<key>type</key>
+				<key>fadespeed</key>
 				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string>System</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>{query}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
-			<string>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</string>
+			<string>D98823FF-6083-4959-AD0C-6841828B0298</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -294,53 +262,75 @@ The script was rewritten in JS, and the Yandex Translator API was removed in fav
 
 #### Commands
 
-Translation of a word, starting from Alfred string on the keyword: `t` or `e`:
+Translation of a word, starting from Alfred string on the keyword: `t` or `е` (russian):
 
-Hotkey to call: `Option ⌥ + Command ⌘ + T`</string>
+Recommended hotkey to call: `Option ⌥ + Command ⌘ + T`</string>
 	<key>uidata</key>
 	<dict>
 		<key>2D68D0D9-6D5A-4D48-89C2-6F3D13E0B947</key>
 		<dict>
 			<key>xpos</key>
-			<real>300</real>
+			<real>170</real>
 			<key>ypos</key>
-			<real>70</real>
+			<real>240</real>
 		</dict>
 		<key>7D5FAEDC-F4E6-4E3B-95D2-BC9A27A063A1</key>
 		<dict>
 			<key>xpos</key>
-			<real>500</real>
+			<real>450</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>110</real>
 		</dict>
 		<key>C1B90B0E-24AB-43C8-9C1A-1A03BDC9B7F2</key>
 		<dict>
 			<key>xpos</key>
-			<real>700</real>
+			<real>450</real>
 			<key>ypos</key>
-			<real>190</real>
+			<real>240</real>
+		</dict>
+		<key>D98823FF-6083-4959-AD0C-6841828B0298</key>
+		<dict>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>405</real>
 		</dict>
 		<key>E9C41A81-A26C-40A3-A3DE-6C0F1C334B8F</key>
 		<dict>
 			<key>xpos</key>
-			<real>105</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>125</real>
-		</dict>
-		<key>FACE79D9-BE5D-431D-97C0-5AD8450A34B6</key>
-		<dict>
-			<key>xpos</key>
-			<real>335</real>
-			<key>ypos</key>
-			<real>235</real>
+			<real>240</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>t||е</string>
+				<key>placeholder</key>
+				<string>t||е</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Set your own keyword</string>
+			<key>label</key>
+			<string>Workflow keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword</string>
+		</dict>
+	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/Mikage777/alfred-translate</string>
 </dict>

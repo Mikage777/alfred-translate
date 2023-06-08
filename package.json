@@ -1,6 +1,6 @@
 {
   "name": "alfred-translate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": {
     "name": "Igor Bakhtin",
@@ -22,14 +22,12 @@
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4",
-    "uglify-js": "^3.17.4",
     "zip-a-folder": "^1.1.5"
   },
   "scripts": {
     "prebuild": "rimraf build || exit 0",
-    "build": "tsc -p tsconfig.build.json && npm run build:copy && npm run build:minify",
+    "build": "tsc -p tsconfig.build.json && npm run build:copy",
     "build:copy": "copyfiles -u 1 src/**/*.png src/**/*.plist build/ && copyfiles screenshots/**/*.png build/ || exit 0",
-    "build:minify": "uglifyjs ./build/translate.js -c -m --toplevel -o ./build/translate.js",
     "postbuild": "sh createBundle.sh",
     "lint": "eslint --max-warnings=0 ./src",
     "test": "npm run lint && npm run test:src",

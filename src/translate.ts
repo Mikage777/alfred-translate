@@ -37,7 +37,7 @@ const DEFAULT_TARGET_LANG = 'ru';
 const NOT_FOUND_TITLE = 'Translation not found';
 
 export function getTranslationDirection(text: string): string {
-  return /^[ -~]*$/.test(text) ? DEFAULT_SOURCE_LANG : DEFAULT_TARGET_LANG;
+  return /^[’ -~]*$/.test(text) ? DEFAULT_SOURCE_LANG : DEFAULT_TARGET_LANG;
 }
 
 export function httpRequest<T>(url: string): Promise<T> {
@@ -141,9 +141,9 @@ export async function getOutput(inputString: string): Promise<Feedback> {
   }
 }
 
-const inputString = process.argv[2];
+const [, , ...inputString] = process.argv;
 
-getOutput(inputString)
+getOutput(inputString?.join(' '))
   .then((fb) => {
     console.log(JSON.stringify(fb));
   })

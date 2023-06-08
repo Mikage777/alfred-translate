@@ -47,6 +47,6 @@ The script was rewritten in JS, and the Yandex Translator API was removed in fav
 
 #### Commands
 
-Translation of a word, starting from Alfred string on the keyword: `t` or `e`:
+Translation of a word, starting from Alfred string on the keyword: `t` or `е` (russian):
 
-Hotkey to call: `Option ⌥ + Command ⌘ + T`
+Recommended hotkey to call: `Option ⌥ + Command ⌘ + T`
